@@ -81,8 +81,8 @@ select q'[이 안에다가 문자를 '작은"큰 이렇게]' from dual;
 
 select '문자' || '이어붙이기' from dual;
 select * from dept;
-selct deptno, dname from dept;
-selct deptno || dname from dept;
+select deptno, dname from dept;
+select deptno || dname from dept;
 select
     '부서번호 : ' || deptno AS "부서번호",
     deptno,
