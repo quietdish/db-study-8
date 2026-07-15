@@ -116,3 +116,25 @@ where deptno in (select dcode
                 from dept2
                 where area = 'Pohang Main Office')
 ;
+
+
+
+
+
+
+select *
+from dept2
+where area = 'Pohang Main Office';
+
+select *
+from emp2 e, (select *
+                from dept2
+                where area = 'Pohang Main Office')
+;
+
+select *
+from emp2 e, (select *
+                from dept2
+                where area = 'Pohang Main Office') d
+where e.deptno = d.dcode
+;
