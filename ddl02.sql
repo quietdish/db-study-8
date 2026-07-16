@@ -143,15 +143,15 @@ BOOLEAN 제공 시작함...
 ---------------------------------------------------------------
 
 insert into t2
-values (1, 'name1', sysdate, 60, 'y');  --중복 제약 위배
+values (1, 'name1', sysdate, 60, 'Y');  --중복 제약 위배
 
 select * from T2;
 
 insert into t2
-values (2, null, sysdate, 60, 'y');     -- 이름 not null 제약 위배
+values (2, null, sysdate, 60, 'Y');     -- 이름 not null 제약 위배
 
 insert into t2
-values (2, 'name2', sysdate, 160, 'y');     -- score 점수범위 (0~100) 제약 위배
+values (2, 'name2', sysdate, 160, 'Y');     -- score 점수범위 (0~100) 제약 위배
 
 insert into t2
-values (2, 'name2', sysdate, 70, 'y');
+values (2, 'name2', sysdate, 70, 'Y');
