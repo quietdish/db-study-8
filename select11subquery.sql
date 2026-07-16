@@ -524,7 +524,7 @@ and A.pay < B.avg_pay;
 select *
 from 
     emp2 A, (
-            select emp_type, trunk(avg(pay)) avg_pay    ---??????????
+            select emp_type, trunc(avg(pay)) avg_pay    ---??????????
             from emp2
             group by emp_type
             ) B
