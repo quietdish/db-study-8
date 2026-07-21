@@ -76,10 +76,48 @@ order by price_group
 
 
 
+2-2) 가격대별로 정리 + 서브쿼리
+
+select price, count(*)
+from (
+    select 
+        case
+            when price BETWEEN 0 AND 9999 THEN 0
+            when price BETWEEN 10000 AND 19999 THEN 10000
+            when price BETWEEN 20000 AND 29999 THEN 20000
+            when price BETWEEN 30000 AND 39999 THEN 30000
+        END price
+    from product_quiz
+)
+group by price
+order by price;
 
 
 
+select grade, COUNT(*)
+from student
+group by grade;
 
+select price, COUNT(*)
+from product_quiz
+group by price;
+
+select * from product_quiz;
+
+
+select price, count(*) products  --count함수는 갯수를 세주는..함수..
+from
+    (select 
+        case
+            when price BETWEEN 0 AND 9999 THEN 0
+            when price BETWEEN 10000 AND 19999 THEN 10000
+            when price BETWEEN 20000 AND 29999 THEN 20000
+            when price BETWEEN 30000 AND 39999 THEN 30000
+        END price
+    from product_quiz)
+group by price
+order by price
+;
 
 
 
